@@ -22,23 +22,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/gaku-c68/software-engineering-study' }
     ],
-    search: {
-      provider: 'local',
-      options: {
-        locales: {
-          root: {
-            translations: {
-              button: { buttonText: '検索', buttonAriaLabel: '教材を検索' },
-              modal: {
-                noResultsText: '検索結果がありません',
-                resetButtonTitle: '検索をクリア',
-                footer: { selectText: '選択', navigateText: '移動', closeText: '閉じる' }
-              }
-            }
-          }
-        }
-      }
-    },
     outline: { label: 'このページの内容', level: [2, 3] },
     docFooter: { prev: '前のページ', next: '次のページ' },
     sidebarMenuLabel: 'メニュー',
