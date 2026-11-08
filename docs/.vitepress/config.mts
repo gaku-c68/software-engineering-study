@@ -7,14 +7,12 @@ export default defineConfig({
   base: '/software-engineering-study/',
   themeConfig: {
     nav: [
-      { text: 'ホーム', link: '/' },
       { text: '勉強会について', link: '/about' }
     ],
     sidebar: [
       {
         text: 'はじめに',
         items: [
-          { text: 'ホーム', link: '/' },
           { text: '勉強会について', link: '/about' }
         ]
       },
