@@ -17,6 +17,12 @@ export default defineConfig({
           { text: 'ホーム', link: '/' },
           { text: '勉強会について', link: '/about' }
         ]
+      },
+      {
+        text: '授業',
+        items: [
+          { text: 'プログラミング言語の違いと使い分け', link: '/programming-languages' }
+        ]
       }
     ],
     socialLinks: [
