@@ -1,0 +1,12 @@
+.VPHero .name {
+  white-space: nowrap;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.VPHero .text,
+.VPHero .tagline {
+  overflow-wrap: normal;
+  word-break: auto-phrase;
+  line-break: strict;
+  text-wrap: balance;
+}
