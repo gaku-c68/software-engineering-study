@@ -2,7 +2,7 @@
 
 大学生向けのソフトウェア開発勉強会の教材サイトです。Web、モバイル、AR・VR、AI、IoT、インフラなどの幅広い分野に触れ、参加者自身がソフトウェアを開発できるようになることを目指します。講義中の閲覧と講義後の自習の両方に利用します。
 
-現在はサイトの土台のみを用意しています。具体的なカリキュラムや教材は今後追加します。
+現在はサイトの土台と、プログラミング言語の違いと使い分けを扱う初回授業ページを用意しています。教材の内容は今後追加します。
 
 ## 技術構成
 
@@ -41,6 +41,7 @@ docs/                        # 公開するMarkdown
   .vitepress/config.mts      # サイト設定、ナビゲーション、サイドバー
   index.md                   # トップページ
   about.md                   # 勉強会概要
+  programming-languages.md   # 初回授業：プログラミング言語の違いと使い分け
 AGENTS.md                    # Codex向けの作業方針
 ```
 
@@ -68,3 +69,13 @@ AGENTS.md                    # Codex向けの作業方針
 PRとmainへのpushでビルドし、mainのpushまたはmainからの手動実行でのみデプロイします。PRからはデプロイしません。デプロイジョブにのみ `pages: write` と `id-token: write` を付与します。追加のアクセストークンは不要です。
 
 GitHub Pagesの `base` は `/software-engineering-study/` に設定しています。リポジトリ名や公開先を変える場合は `docs/.vitepress/config.mts` の `base`、GitHubへのリンク、本READMEのURLを更新してください。
+
+### デプロイに失敗した場合
+
+`build` ジョブが成功しているのに `deploy` ジョブで `404 Not Found` が発生する場合は、GitHub Pagesが有効になっていない可能性があります。リポジトリの管理者が次を確認してください。
+
+1. **Settings → Pages → Build and deployment → Source** が **GitHub Actions** になっていること
+2. **Settings → Actions → General** でActionsの実行が許可されていること
+3. `github-pages` Environmentに承認待ちや制限がないこと
+
+設定後、**Actions → Deploy VitePress site to Pages → Run workflow** から `main` を選んで再実行できます。
