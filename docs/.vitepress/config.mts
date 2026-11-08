@@ -19,7 +19,8 @@ export default defineConfig({
       {
         text: '授業',
         items: [
-          { text: 'プログラミング言語の違いと使い分け', link: '/programming-languages' }
+          { text: 'プログラミング言語の違いと使い分け', link: '/programming-languages' },
+          { text: 'ソフトウェア開発の全体像', link: '/software-overview' }
         ]
       }
     ],
